@@ -1,0 +1,7 @@
+export INLA_OS='mac.arm64'
+export INLA_PATH='/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/INLA/bin'
+export INLA_RHOME='/Library/Frameworks/R.framework/Resources'
+export INLA_RVERSION='4.2'
+export INLA_VECLIB_PATH=''
+export INLA_VERSION='23.04.24'
+export PARDISOLICMESSAGE='1'

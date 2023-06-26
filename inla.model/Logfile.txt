@@ -1,0 +1,352 @@
+
+
+*************************************************************************** 
+CONTAINS Runtime Modules of Parallel Sparse Linear Solver PARDISO Vers. 7.2
+CUSTOMIZED FOR THE R-INLA PACKAGE WHICH SOLVES A LARGE CLASS OF STATISTICAL
+MODELS USING THE INLA APPROACH.                                            
+Copyright Universita della Svizzera italiana 2000-2020 All Rights Reserved.
+
+No PARDISO license file found.  Please see `http://www.pardiso-project.org/r-inla
+where to place the license file pardiso.lic 
+*************************************************************************** 
+	Read ntt 8 1 with max.threads 8
+	Found num.threads = 8:1 max_threads = 8
+
+	882c43d68fb015d72b699bcc458cf277dfe110c2 - Mon Apr 24 16:19:16 2023 +0100
+Report bugs to <help@r-inla.org>
+Set reordering to id=[0] and name=[default]
+Process file[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/Model.ini] threads[8] max.threads[8] blas_threads[1] nested[8:1]
+inla_build...
+	number of sections=[10]
+	parse section=[0] name=[INLA.libR] type=[LIBR]
+	inla_parse_libR...
+		section[INLA.libR]
+			R_HOME=[/Library/Frameworks/R.framework/Resources]
+	parse section=[7] name=[INLA.Expert] type=[EXPERT]
+	inla_parse_expert...
+		section[INLA.Expert]
+			disable.gaussian.check=[0]
+			Measure dot.product.gain=[No]
+			cpo.manual=[0]
+			jp.file=[(null)]
+			jp.model=[(null)]
+	parse section=[1] name=[INLA.Model] type=[PROBLEM]
+	inla_parse_problem...
+		name=[INLA.Model]
+		R-INLA version = [23.04.24]
+		R-INLA build date = [Mon Apr 24 10:06:18 PM +03 2023 (Version_23.04.24)]
+		Build tag = [Version_23.04.24]
+		System memory = [8.0Gb]
+		Cores = (Physical= 8, Logical= 8)
+		'char' is signed
+		openmp.strategy=[default]
+		pardiso-library installed and working? = [no]
+		smtp = [taucs]
+		strategy = [default]
+		store results in directory=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/results.files]
+		output:
+			gcpo=[0]
+				num.level.sets=[-1]
+				size.max=[32]
+				strategy=[Posterior]
+				correct.hyperpar=[1]
+				epsilon=[0.005]
+				prior.diagonal=[0.0001]
+				keep=[]
+				remove.fixed=[1]
+				remove=[]
+			cpo=[1]
+			po=[1]
+			dic=[1]
+			kld=[1]
+			mlik=[1]
+			q=[0]
+			graph=[0]
+			hyperparameters=[1]
+			config=[0]
+			likelihood.info=[0]
+			internal.opt=[1]
+			summary=[1]
+			return.marginals=[1]
+			return.marginals.predictor=[0]
+			nquantiles=[3]  [ 0.025 0.5 0.975 ]
+			ncdf=[0]  [ ]
+	parse section=[3] name=[Predictor] type=[PREDICTOR]
+	inla_parse_predictor ...
+		section=[Predictor]
+		dir=[predictor]
+		PRIOR->name=[loggamma]
+		hyperid=[53001|Predictor]
+		PRIOR->from_theta=[function (x) <<NEWLINE>>exp(x)]
+		PRIOR->to_theta = [function (x) <<NEWLINE>>log(x)]
+		PRIOR->PARAMETERS=[1, 1e-05]
+		initialise log_precision[13.8155]
+		fixed=[1]
+		user.scale=[1]
+		n=[100]
+		m=[0]
+		ndata=[100]
+		compute=[1]
+		read offsets from file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf66a153f9b]
+		read n=[200] entries from file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf66a153f9b]
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf66a153f9b] 0/100  (idx,y) = (0, 0)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf66a153f9b] 1/100  (idx,y) = (1, 0)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf66a153f9b] 2/100  (idx,y) = (2, 0)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf66a153f9b] 3/100  (idx,y) = (3, 0)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf66a153f9b] 4/100  (idx,y) = (4, 0)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf66a153f9b] 5/100  (idx,y) = (5, 0)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf66a153f9b] 6/100  (idx,y) = (6, 0)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf66a153f9b] 7/100  (idx,y) = (7, 0)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf66a153f9b] 8/100  (idx,y) = (8, 0)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf66a153f9b] 9/100  (idx,y) = (9, 0)
+		A=[(null)]
+		Aext=[(null)]
+		AextPrecision=[1e+08]
+		output:
+			summary=[1]
+			return.marginals=[1]
+			return.marginals.predictor=[0]
+			nquantiles=[3]  [ 0.025 0.5 0.975 ]
+			ncdf=[0]  [ ]
+	parse section=[2] name=[INLA.Data1] type=[DATA]
+	inla_parse_data [section 1]...
+		tag=[INLA.Data1]
+		family=[POISSON]
+		likelihood=[POISSON]
+		file->name=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf633234145]
+		file->name=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf64f92333d]
+		file->name=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf637b381e6]
+		file->name=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf6762129b]
+		read n=[300] entries from file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf633234145]
+		mdata.nattributes = 0
+			0/100  (idx,a,y,d) = (0, 1, 49, 1)
+			1/100  (idx,a,y,d) = (1, 1, 50, 1)
+			2/100  (idx,a,y,d) = (2, 1, 17, 1)
+			3/100  (idx,a,y,d) = (3, 1, 11, 1)
+			4/100  (idx,a,y,d) = (4, 1, 7, 1)
+			5/100  (idx,a,y,d) = (5, 1, 59, 1)
+			6/100  (idx,a,y,d) = (6, 1, 26, 1)
+			7/100  (idx,a,y,d) = (7, 1, 23, 1)
+			8/100  (idx,a,y,d) = (8, 1, 22, 1)
+			9/100  (idx,a,y,d) = (9, 1, 6, 1)
+		likelihood.variant=[0]
+		likelihood.quantile=[0.99]
+		Link model   [QUANTILE]
+		Link order   [-1]
+		Link variant [-1]
+		Link a       [1]
+		Link ntheta  [0]
+		mix.use[0]
+	section=[4] name=[(Intercept)] type=[LINEAR]
+	inla_parse_linear...
+		section[(Intercept)]
+		dir=[fixed.effect00000001]
+		file for covariates=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf619030f86]
+		read n=[200] entries from file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf619030f86]
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf619030f86] 0/100  (idx,y) = (0, 1)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf619030f86] 1/100  (idx,y) = (1, 1)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf619030f86] 2/100  (idx,y) = (2, 1)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf619030f86] 3/100  (idx,y) = (3, 1)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf619030f86] 4/100  (idx,y) = (4, 1)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf619030f86] 5/100  (idx,y) = (5, 1)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf619030f86] 6/100  (idx,y) = (6, 1)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf619030f86] 7/100  (idx,y) = (7, 1)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf619030f86] 8/100  (idx,y) = (8, 1)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf619030f86] 9/100  (idx,y) = (9, 1)
+		prior mean=[0]
+		prior precision=[0]
+		compute=[1]
+		output:
+			summary=[1]
+			return.marginals=[1]
+			return.marginals.predictor=[0]
+			nquantiles=[3]  [ 0.025 0.5 0.975 ]
+			ncdf=[0]  [ ]
+	section=[5] name=[x] type=[LINEAR]
+	inla_parse_linear...
+		section[x]
+		dir=[fixed.effect00000002]
+		file for covariates=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf617f0333e]
+		read n=[200] entries from file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf617f0333e]
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf617f0333e] 0/100  (idx,y) = (0, 0.158028)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf617f0333e] 1/100  (idx,y) = (1, 0.323154)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf617f0333e] 2/100  (idx,y) = (2, -0.677111)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf617f0333e] 3/100  (idx,y) = (3, -1.12501)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf617f0333e] 4/100  (idx,y) = (4, -1.19735)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf617f0333e] 5/100  (idx,y) = (5, 0.474887)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf617f0333e] 6/100  (idx,y) = (6, -0.524808)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf617f0333e] 7/100  (idx,y) = (7, -0.612174)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf617f0333e] 8/100  (idx,y) = (8, -0.748235)
+		file=[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/data.files/filebf617f0333e] 9/100  (idx,y) = (9, -1.74085)
+		prior mean=[0]
+		prior precision=[0.001]
+		compute=[1]
+		output:
+			summary=[1]
+			return.marginals=[1]
+			return.marginals.predictor=[0]
+			nquantiles=[3]  [ 0.025 0.5 0.975 ]
+			ncdf=[0]  [ ]
+	parse section=[9] name=[INLA.pardiso] type=[PARDISO]
+	inla_parse_pardiso...
+		section[INLA.pardiso]
+		verbose[0]
+		debug[0]
+		parallel.reordering[1]
+		nrhs[-1]
+	parse section=[8] name=[INLA.lp.scale] type=[LP.SCALE]
+	inla_parse_lp_scale...
+		section[INLA.lp.scale]
+
+	Index table: number of entries[3], total length[102]
+		tag                            start-index     length
+		Predictor                               0        100
+		(Intercept)                           100          1
+		x                                     101          1
+	None hyperparameters
+
+	parse section=[6] name=[INLA.Parameters] type=[INLA]
+	inla_parse_INLA...
+		section[INLA.Parameters]
+			lincomb.derived.correlation.matrix = [No]
+		global_node.factor = 2.000
+		global_node.degree = 2147483647
+		reordering = -1
+		constr.marginal.diagonal = 1.49e-08
+Contents of ai_param 0x10528c1c0
+	Optimiser: DEFAULT METHOD
+		Option for GSL-BFGS2: tol  = 0.1
+		Option for GSL-BFGS2: step_size = 1
+		Option for GSL-BFGS2: epsx = 0.005
+		Option for GSL-BFGS2: epsf = 0.01
+		Option for GSL-BFGS2: epsg = 0.005
+		Restart: 0
+		Optimise: try to be smart: Yes
+		Optimise: use directions: Yes
+		Mode known: No
+		parallel linesearch [0]
+	Gaussian approximation:
+		tolerance_func = 0.0005
+		tolerance_step = 0.001
+		optpar_fp = 0
+		optpar_nr_step_factor = -0.1
+	Gaussian data: No
+	Strategy: 	Use a mean-skew corrected Gaussian by fitting a Skew-Normal
+	Fast mode: 	On
+	Use linear approximation to log(|Q +c|)? Yes
+		Method:	 Compute the derivative exact
+	Parameters for improved approximations
+		Number of points evaluate:	 9
+		Step length to compute derivatives numerically:	 0.0001
+		Stencil to compute derivatives numerically:	 5
+		Cutoff value to construct local neigborhood:	 0.0001
+	Log calculations:	 On
+	Log calculated marginal for the hyperparameters:	 On
+	Integration strategy:	 Automatic (GRID for dim(theta)=1 and 2 and otherwise CCD)
+		f0 (CCD only):	 1.100
+		dz (GRID only):	 0.750
+		Adjust weights (GRID only):	 On
+		Difference in log-density limit (GRID only):	 6.000
+		Skip configurations with (presumed) small density (GRID only):	 On
+	Gradient is computed using Central difference with step-length 0.005000
+	Hessian is computed using Central difference with step-length 0.070711
+	Hessian matrix is forced to be a diagonal matrix? [No]
+	Compute effective number of parameters? [Yes]
+	Perform a Monte Carlo error-test? [No]
+	Interpolator [Auto]
+	CPO required diff in log-density [3]
+	Stupid search mode:
+		Status     [On]
+		Max iter   [1000]
+		Factor     [1.05]
+	Numerical integration of hyperparameters:
+		Maximum number of function evaluations [100000]
+		Relative error ....................... [1e-05]
+		Absolute error ....................... [1e-06]
+	To stabilise the numerical optimisation:
+		Minimum value of the -Hessian [-inf]
+		Strategy for the linear term [Skip]
+	CPO manual calculation[No]
+	VB correction is [Enabled]
+		strategy            = [mean]
+		verbose             = [Yes]
+		f_enable_limit_mean = [30]
+		f_enable_limit_var  = [25]
+		iter_max            = [25]
+		emergency           = [25.00]
+		hessian_update      = [2]
+		hessian_strategy    = [full]
+inla_build: check for unused entries in[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/Model.ini]
+inla_INLA_preopt_experimental...
+	Strategy = [DEFAULT]
+	Mode....................... [Compact]
+	Setup...................... [0.00s]
+	Sparse-matrix library...... [taucs]
+	OpenMP strategy............ [small]
+	num.threads................ [8:1]
+	blas.num.threads........... [1]
+	Density-strategy........... [High]
+	Size of graph.............. [2]
+	Number of constraints...... [0]
+	Optimizing sort2 cut-off... [322]
+	Optimizing Qx-strategy..... serial[nan] parallel [nan] choose[parallel]
+	Optimizing pred-strategy... plain [0.000] data-rich[1.000] choose[plain]
+	Optimizing dot-products.... plain....[0.250] group....[0.250]
+	                            plain.mkl[0.250] group.mkl[0.250]
+	                            ==> optimal.mix.strategy  [0.000]
+	                                plain....[80.0%] group....[20.0%]
+	                                plain.mkl[ 0.0%] group.mkl[ 0.0%]
+	Found optimal reordering=[metis] nnz(L)=[2] and use_global_nodes(user)=[no]
+	None hyperparameters
+
+
+Compute initial values...
+	Iter[0] RMS(err) = 1.000, update with step-size = 1.036
+	Iter[1] RMS(err) = 0.076, update with step-size = 0.987
+	Initial values computed in 0.0076 seconds
+		x[0] = 3.0819
+		x[1] = 1.4353
+		x[0] = 3.0819
+		x[1] = 1.4353
+
+maxld= -331.044 fn=  1 theta= [4.0, 0.01]
+	[0]Iter [0/25] VB correct with strategy [MEAN] in total[0.002sec] hess/grad[0.117]
+		Number of nodes corrected for [2] max(dx/sd)[0.0099]
+		Node[0] delta[-0.000] dx/sd[-0.010] |x-mode|/sd[-0.010]
+		Node[1] delta[0.000] dx/sd[0.002] |x-mode|/sd[0.002]
+		Implied correction for [100] nodes
+config  0/1=[ ] log(rel.dens)=  0.000, [0] accept, compute, 0.01s
+
+Combine the densities with relative weights:
+config  0/ 1=[ ] weight=  1.000 adjusted weight=  1.000
+
+DIC:
+	Mean of Deviance ................. 641.553
+	Deviance at Mean ................. 639.552
+	Effective number of parameters ... 2.00083
+	DIC .............................. 643.554
+DIC (Saturated):
+	Mean of Deviance ................. 98.1918
+	Deviance at Mean ................. 96.191
+	Effective number of parameters ... 2.00083
+	DIC .............................. 100.193
+Store results in directory[/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/results.files]
+
+Wall-clock time used on [/Users/qucheng/Documents/GitHub/dengue_heavyrain/inla.model/Model.ini]
+	Preparations             :   0.008 seconds
+	Approx inference (stage1):   0.039 seconds
+	Approx inference (stage2):   0.000 seconds
+	Approx inference (total) :   0.039 seconds
+	Output                   :   0.080 seconds
+	------------------------------------------
+	Total                    :   0.127 seconds
+
+Stage1:	Number of fn-calls= 1 with 0.0387 sec/fn-call
+Stage2:	Number of fn-calls= 0 with 0.0387 sec/fn-call
+Stage1:	Accumulated CPU-time is equivalent to 2.30 threads running at 100%
+	Efficiency using 8 threads = 28.78%
+Stage2:	Accumulated CPU-time is equivalent to 0.76 threads running at 100%
+	Efficiency using 8 threads = 9.49%
+Total:	Accumulated CPU-time is equivalent to 2.30 threads running at 100%
+	Efficiency using 8 threads = 28.78%
+

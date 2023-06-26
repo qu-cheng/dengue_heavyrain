@@ -13,12 +13,6 @@
 # 5. number of knots for the exposure- or lag-response relationships: 3 or 4
 # 6. remove 2014
 
-source("0_packages_data_functions.R")
-
-
-
-
-
 
 # STEP 1: centering value for prior water availability
 source("0_packages_data_functions.R")
